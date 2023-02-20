@@ -6,15 +6,17 @@ import Bars2Icon from "@heroicons/react/24/outline/Bars2Icon"
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon"
 import links from "./routes";
 
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from "react";
 
 
 import './globals.css'
 
 export default function RootLayout({children}: {children: React.ReactNode;}) {
-  const href = `/${window.location.pathname.split('/')[1]}`;
+  const href = usePathname();
+  
   const [menuClose, setMenuClose] = useState(false);
-  const [menuActive, setMenuActive ] = useState(href);
+  const [menuActive, setMenuActive ] = useState(href ?? "/");
 
   const menuToogleStyles = menuClose ? "" : "hidden";
 
