@@ -1,0 +1,47 @@
+
+.main {
+    display: flex;
+    position: relative;
+
+    .tableContainer {
+        overflow: auto;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead{
+            position: sticky;
+
+            th{
+                -webkit-user-select: none;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+
+        tr {
+            width: 100%;
+
+            &>td {
+                &.start, &.left{
+                    text-align: start;
+                    
+                    div{
+                        justify-content: start;
+                    }
+                }
+
+                &.end, &.right{
+                    text-align: start;
+                    
+                    div{
+                        justify-content: start;
+                    }
+                }
+            }
+        }
+    }
+}
