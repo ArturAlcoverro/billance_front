@@ -17,7 +17,6 @@ export default function AButton({children, className, color = "blue", href, ...p
     <Link
       href={href}
       className={`${colors[color]} w-fit cursor-pointer rounded-lg text-base px-4 py-2 mr-2 mb-2 flex items-center justify-center gap-2 ${styles.main} ${className}`}
-      {...props}
     >
       {children}
     </Link>
