@@ -1,9 +1,9 @@
-import { Inter } from '@next/font/google'
-
+import Header1 from "./components/Headers/Header1";
 
 export default function Home() {
   return (
-    <main >
-    </main>
+    <>
+      <Header1>Dashboard</Header1>
+    </>
   )
 }
