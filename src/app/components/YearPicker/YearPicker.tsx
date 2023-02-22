@@ -49,7 +49,7 @@ export default function YearPicker({
         <Button
           color={color}
           onClick={buttonClickHandler}
-          className="w-full rounded-none"
+          className="w-full rounded-none border-r-0 border-l-0"
         >
           {year}
         </Button>

@@ -8,7 +8,6 @@ export default async function AddRecordPage() {
   return (
     <>
       <Header1>Add record</Header1>
-      <Test></Test>
     </>
   );
 }

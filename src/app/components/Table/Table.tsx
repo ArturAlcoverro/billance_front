@@ -26,10 +26,10 @@ function Table({ data, structure, defaultSortIndex }: any) {
   }, [sortIndex]);
 
   return (
-    <div className={`${styles.main} bg-slate-50 shadow-lg rounded-2xl text-sm text-slate-600`}>
+    <div className={`${styles.main} bg-white border border-slate-300 rounded-2xl text-sm text-slate-600`}>
       <div className={styles.tableContainer}>
         <table>
-          <thead className='border-b-2 border-slate-200'>
+          <thead className='border-b border-slate-300'>
             <tr>
               {structure.map((e: TableStructure, i: number) => (
                 <th
@@ -44,9 +44,9 @@ function Table({ data, structure, defaultSortIndex }: any) {
               ))}
             </tr>
           </thead>
-          <tbody className='py-10'>
+          <tbody>
             {sortData(data, structure, sortIndex).map((e: any, i: number) => (
-              <tr key={i} className="children:first:pt-5 children:last:pb-5">
+              <tr key={i} className="children:first:pt-3 children:last:pb-3">
                 {structure.map((s: TableStructure) => (
                   <td
                     key={s.datakey}

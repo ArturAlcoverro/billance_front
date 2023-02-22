@@ -12,7 +12,7 @@ export default function DropdownContainer({
     <>
       {open && (
         <div
-          className={`shadow-lg absolute z-20 bg-slate-50 p-2 rounded-md ${positions[position]} ${alignments[position][align]} ${className}`}
+          className={`border border-slate-300 absolute z-20 bg-white p-2 rounded-lg ${positions[position]} ${alignments[position][align]} ${className}`}
           {...props}
         >
           {children}

@@ -8,7 +8,7 @@ export default function NavMenu({ links, closeFunction, active, setActive }: Nav
   }
 
   return (
-    <div className="h-full flex flex-col items-center gap-3 pt-28">
+    <div className="h-full flex flex-col items-center gap-3 pt-28 px-2">
       {links.map(({ href, label, icon }) => {
         const Icon = icon;
 

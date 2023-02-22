@@ -14,7 +14,7 @@ export default function Picker({
   return (
     <div className={`flex ${className}`}>
       <Button
-        className="rounded-r-none mr-0.5 flex-grow-0 !px-1"
+        className="rounded-r-none flex-grow-0 !px-1"
         color={color}
         onClick={prevHandle}
       >
@@ -24,7 +24,7 @@ export default function Picker({
       <div className="flex-grow">{children}</div>
 
       <Button
-        className="rounded-l-none ml-0.5 flex-grow-0 !px-1"
+        className="rounded-l-none flex-grow-0 !px-1"
         color={color}
         onClick={nextHandle}
       >

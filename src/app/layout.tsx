@@ -29,13 +29,13 @@ export default function RootLayout({children}: {children: React.ReactNode;}) {
   return (
     <html lang="en">
       <head />
-      <body className="w-full bg-slate-100  m-auto max-w-5xl bg-slate-0 min-h-screen grid lg:grid-cols-[12rem_1fr] grid-cols-[4rem_1fr] relative">
+      <body className="w-full bg-slate-50  m-auto max-w-7xl bg-slate-0 min-h-screen grid lg:grid-cols-[12rem_1fr] grid-cols-[4rem_1fr] relative">
         <nav
-          className={`min-h-screen col-start-1 sm:col-end-2 fixed bg-slate-100 sm:block lg:w-auto sm:w-16 w-full border-l-pink-600 z-10 border-slate-300 ${menuToogleStyles}`}
+          className={`min-h-screen col-start-1 sm:col-end-2 fixed bg-slate-50 sm:block lg:w-auto sm:w-16 w-full border-l-pink-600 z-10 border-slate-300 ${menuToogleStyles}`}
         >
           <NavMenu closeFunction={()=>{setMenuClose(false);}} links={links} active={menuActive} setActive={setMenuActive} />
         </nav>
-        <main className="min-h-screen sm:col-start-2 sm:col-end-3 col-start-1 col-end-3 border-l-pink-600 sm:pl-0 p-4 sm:pt-10">
+        <main className="min-h-screen sm:col-start-2 sm:col-end-3 col-start-1 col-end-3 border-l-pink-600 sm:pl-0 p-4">
           {children}
         </main>
           <button
