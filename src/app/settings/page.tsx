@@ -1,4 +1,4 @@
-import Header1 from "../components/Headers/Header1";
+import Header1 from "../../components/Headers/Header1";
 
 export default async function SettingsPage() {
   return (

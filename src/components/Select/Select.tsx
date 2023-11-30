@@ -20,14 +20,16 @@ export default function Select({
   ...props
 }: SelectProps) {
   const optionsMap = useMemo(() => {
-    const obj:any = {} 
+    const obj: any = {};
     options.forEach((option) => {
       obj[option.key] = option;
     });
     return obj;
   }, [options]);
 
-  const [value, setValue] = useState<SelectOption | null>(optionsMap[defaultKey] ?? null);
+  const [value, setValue] = useState<SelectOption | null>(
+    optionsMap[defaultKey] ?? null
+  );
   const [show, setShow] = useState(false);
   const ref = useRef<HTMLDivElement>() as MutableRefObject<HTMLDivElement>;
 
@@ -46,33 +48,40 @@ export default function Select({
   }
 
   return (
-    <div ref={ref} className={`inline-flex relative ${className}`} {...props}>
-      <Button onClick={buttonClickHandler} color={color} className={`flex justify-between w-full`}>
-        <p className={value === null ? "opacity-70" : ""}>
-          {value !== null ? value.value : placeholder}
-        </p>
-        <ChevronUpDownIcon/>
-      </Button>
+    <div className={className} {...props}>
+      <div ref={ref} className={`relative`}>
+        <Button
+          onClick={buttonClickHandler}
+          color={color}
+          className={`flex justify-between w-full`}
+        >
+          <p className={value === null ? "opacity-70" : ""}>
+            {value !== null ? value.value : placeholder}
+          </p>
+          <ChevronUpDownIcon />
+        </Button>
 
-      <DropdownContainer open={show} className="min-w-full">
-        <div className="flex flex-col gap-1">
-          {options.map((option) => {
-            const classes = value?.key !== option.key
-              ? "p-2 px-3 rounded-md text-start hover:bg-slate-150 text-slate-600"
-              : "p-2 px-3 rounded-md text-start bg-blue-200 text-blue-600";
+        <DropdownContainer open={show} className="min-w-full">
+          <div className="flex flex-col gap-1">
+            {options.map((option) => {
+              const classes =
+                value?.key !== option.key
+                  ? "p-2 px-3 rounded-md text-start hover:bg-slate-150 text-slate-600"
+                  : "p-2 px-3 rounded-md text-start bg-blue-200 text-blue-600";
 
-            return (
-              <button
-                className={classes}
-                key={option.key}
-                onClick={() => selectOption(option)}
-              >
-                {option.value}
-              </button>
-            );
-          })}
-        </div>
-      </DropdownContainer>
+              return (
+                <button
+                  className={classes}
+                  key={option.key}
+                  onClick={() => selectOption(option)}
+                >
+                  {option.value}
+                </button>
+              );
+            })}
+          </div>
+        </DropdownContainer>
+      </div>
     </div>
   );
 }

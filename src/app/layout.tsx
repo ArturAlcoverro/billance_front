@@ -1,6 +1,6 @@
 'use client'
 
-import NavMenu from "./components/NavMenu/NavMenu";
+import NavMenu from "../components/NavMenu/NavMenu";
 
 import Bars2Icon from "@heroicons/react/24/outline/Bars2Icon"
 import XMarkIcon from "@heroicons/react/24/outline/XMarkIcon"
@@ -47,7 +47,6 @@ export default function RootLayout({children}: {children: React.ReactNode;}) {
             <MenuIcon></MenuIcon>
             <span className="sr-only">Menu</span>
           </button>
-
       </body>
     </html>
   );

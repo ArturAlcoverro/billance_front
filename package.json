@@ -1,5 +1,5 @@
 {
-  "name": "bill-logs",
+  "name": "billance",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,19 +10,21 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
-    "@next/font": "13.1.6",
     "@rooks/use-boundingclientrect": "^4.11.2",
     "@rooks/use-outside-click": "^4.11.2",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "@wbe/use-bounding-client-rect": "^2.7.1",
+    "apexcharts": "^3.44.0",
     "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "eslint-config-next": "^14.0.3",
+    "next": "^14.0.3",
+    "node-ts": "^5.1.2",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "^18.2.0",
     "react-overlays": "^5.2.1",
+    "react-resize-detector": "^8.0.4",
     "typescript": "4.9.5"
   },
   "devDependencies": {
